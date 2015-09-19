@@ -1,0 +1,39 @@
+# Programaci-n-Orientada-a-Objetos-2015-2
+import java.util.Scanner;
+
+public class PointD {
+
+	public static void main(String[] args) {
+		Scanner leer = new Scanner(System.in);
+		int [] valordebilletes = {50000 , 20000 , 10000, 5000, 2000, 1000};
+		//crearemos un arreglo con los valores de los billetes
+		int numerodebilletes = 0;
+		//crearemos una variable entera para el numero de billetes a regresar
+		
+		int [] valordemonedas = {500 , 200 , 100 , 50};
+		//crearemos un arreglo con los valores de las monedas
+		int numerodemonedas = 0;
+		//crearemos una variable entera para el numero de monedas a regresar
+		
+		System.out.print("Dijite el valor a retirar: ");
+		int valor = leer.nextInt();
+		int falta = valor;
+		for(int n = 0; n < 6 ; n++){
+				if(falta >= valordebilletes [n]){
+				numerodebilletes = falta/valordebilletes [n];
+				falta = falta%valordebilletes [n];
+			    System.out.println("Se le devuelve "+numerodebilletes+" billetes de $"+ valordebilletes [n]);
+				}
+		}
+		for(int n = 0; n < 4 ; n++){
+				if(falta >= valordemonedas [n]){
+				numerodemonedas = falta/valordemonedas [n];
+				falta = falta%valordemonedas [n];
+			    System.out.println("Se le devuelve "+numerodemonedas+" monedas de $"+ valordemonedas [n]);
+				}
+		}
+		
+
+	}
+
+}
