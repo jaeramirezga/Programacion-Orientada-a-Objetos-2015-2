@@ -1,0 +1,22 @@
+# Programaci-n-Orientada-a-Objetos-2015-2
+import java.util.Scanner;
+
+public class PointC {
+
+	public static void main(String[] args) {
+		int suma = 0, numeros = 0;
+		Scanner leer = new Scanner(System.in);
+		int numero;
+		System.out.println("Dijite un numero entero: ");
+		do{
+			System.out.print((numeros+1)+": ");
+			numero = leer.nextInt();
+			if (numero == 9999)
+				break;
+			numeros++;
+			suma += numero;
+		  }while( numero != 9999);
+		System.out.print("The average is: "+suma/numeros);
+		}
+			
+	}
