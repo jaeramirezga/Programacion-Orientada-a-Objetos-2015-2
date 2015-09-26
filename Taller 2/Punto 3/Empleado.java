@@ -1,4 +1,3 @@
-package PointC;
 
 public class Empleado {
 	

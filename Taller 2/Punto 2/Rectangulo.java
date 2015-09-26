@@ -1,3 +1,6 @@
+
+
+
 public class Rectangulo {
 	// Creamos una Clase llamada Rectangulo
 	

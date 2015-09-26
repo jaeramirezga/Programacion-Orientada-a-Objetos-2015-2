@@ -1,4 +1,4 @@
-package PointC;
+
 
 public class EmpleadoTest {
     
@@ -6,7 +6,7 @@ public class EmpleadoTest {
 		
 		Empleado No1 = new Empleado( "Juan" , "Ramirez" , 12300);
 		Empleado No2 = new Empleado( "Daniela" , "Ramirez" , 5432);
-		Empleado No3 = new Empleado( "Nicolas" , "Contreras" , 1000000);
+		Empleado No3 = new Empleado( "Juan" , "Contreras" , 1000000);
 		Empleado No4 = new Empleado( "Andres" , "Corson" , 5000000);
 		Empleado No5 = new Empleado( "Augusto" , "Ramirez" , 3000000);
 		
