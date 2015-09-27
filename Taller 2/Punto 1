@@ -49,5 +49,33 @@ si los objetos que estan manipulando son validos y tomar medidas apropiadas si n
 e. El Garbage Collector elimina los objetos que ya no se utilizan proporcionando una gestión de memoria automática. 
 ¿Cómo la JVM realiza el manejo de recursos? ¿Cuándo y cómo funciona el Garbage Collector?
 
+¿Cómo la JVM realiza el manejo de recursos?
+En principio, Java tiene varias similitudes con el modelo tradicional de ejecución de programas. En la JVM
+existen principalmente dos tipos de variables:
+· las primitivas (int, long, float, etc),
+· las de referencia a objetos
+Las primeras tienen una estructura fija y su contenido representa el dato en sí. Tanto la condición de
+estructuras de tamaño fijo como el de su tamaño relativamente pequeño hacen que sea práctica una
+administración de las mismas mediante el mismo mecanismo con memoria “Stack”.
+También las variables de referencia tienen una estructura fija, pero su contenido no es un dato en si, sino una
+dirección de memoria donde se encuentra la instancia del objeto que representa. Esto hace que sea posible
+también que las variables de referencia se administren mediante un “Stack”.
+Luego, éstas contienen la dirección de memoria de una estructura mucho más compleja, una instancia de una
+Clase (a la cual llamaremos objeto). El objeto no solamente representa un dato, sino que representa un
+conjunto de datos asociados a un concepto que incluye operaciones capaces de actuar sobre estos mismos
+datos. Debido a la cantidad de información que mantienen y la complejidad que requiere su administra ción,
+los objetos se guardan en el “Heap”. Los objetos pueden contener múltiples valores, y la referencia al objeto
+debe mantenerse durante toda la vida de ese objeto.
+
+¿Cuándo y cómo funciona el Garbage Collector?
+El proceso de recuperar la memoria del “Heap” que ya no esta siendo utilizada por algún objeto referenciado
+desde las variables del “Stack” se denomina Garbage Collector. El mismo se refiere a un algoritmo que,
+aunque implementado distinto, cumple la función de establecer que objetos ya no son utilizables (han perdido
+toda referencia a ellos) y por lo tanto, puede reutilizarse la memoria que ocupan. Este algoritmo, no solamente
+tendrá algunas diferencias entre distintas JVMs, sino que es posible encontrar distintos algoritmos para
+distintas situaciones en una misma JVM.
+
+
+
 
 
