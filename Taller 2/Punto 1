@@ -1,0 +1,81 @@
+a.	¿Cuál es la importancia de la abstracción en el proceso de modelado?
+La abstracción consiste en captar las características esenciales de un objeto, así como su comportamiento, por tal motivo,
+es la clave en el proceso de análisis y diseño orientado a objetos, ya que mediante ella podemos llegar a armar un conjunto 
+de clases que permitan modelar la realidad o el problema que se quiere atacar.
+
+b.	 ¿Cuál es el código cliente (client code) y donde podemos encontrarlo?
+
+c. ¿Cuáles son las similitudes y diferencias entre las variables de tipo primitivo (Primitive-type) y las variables 
+de tipo referencia (reference-type)?
+Los tipos de datos en Java se dividen en dos categorías: tipos primitivos y tipos por referencia (algunas veces conocidos 
+como tipos no primitivos). Los tipos primitivos son boolean, byte, char, short, int, long, float y double. Todos los tipos 
+no primitivos son tipos por referencia, por lo cual las clases, que especifican los tipos de objetos, son tipos por referencia.
+Similitudes
+-Declaran una variable
+-los dos tipos se pueden inicializar
+
+Diferencias
+- Una variable de tipo primitivo puede almacenar sólo un valor de su tipo declarado a la vez.
+- Las variables de instancia de tipo primitivo se inicializan de manera predeterminada.
+- Las variables de los tipos byte, char, short, int, long, float y double se inicializan con 0, y las variables de tipo
+boolean se inicializan con false.
+- Los programas utilizan variables de tipo por referencia para almacenar las ubicaciones de los objetos en la memoria de la 
+computadora.
+-Cada uno de los objetos a los que se hace referencia pueden contener muchas variables de instancia y métodos.
+-Las variables de instancia de tipo por referencia se inicializan de manera predeterminada con el valor null: una palabra
+reservada que representa una “referencia a nada”.
+- Las variables de tipo primitivo no hacen referencias a objetos, por lo que dichas variables no pueden utilizarse para 
+invocar métodos.
+
+d. Explique cuándo y por qué una clase debe proveer los métodos get/set para una variable de instancia.
+Las variables de ejemplar privadas solo pueden manipularse con métodos de la clase. Una manipulación común seria el 
+ajuste del saldo de la cuenta bancaria de un cliente por un método calcularIntereses.
+Las clases a menudo ofrecen métodos public que permitan a los clientes de la clase establecer (set, en inglés) 
+(es decir, asignar valores a), u obtener (get, en inglés) (es decir, conseguir los valores de) variables de ejemplar 
+privadas. No es necesario que estos métodos se llamen set y get, pero es comun que esto ocurra. Los metodos get también se
+conocen como métodos accesores o métodos de consulta.
+Podria parecer que ofrecer capacidades set y get es practicamente lo mismo que hacer public las variables de ejemplar. Éste 
+es otro aspecto sutil de Java que hace al lenguaje tan deseable para la ingenieria de software. Si una variable es public,
+cualquier método del programa podrá leerla o escribirla a voluntad. Si una variable ejemplar es private, ciertamente parecería
+que un método get público permite a otros métodos leer los datos a voluntad, pero el método get controla el formateo y la 
+exhibición de los datos. Un método set puede examinar cuidadosamente los intentos por modificar el valor de la variable de 
+ejemplar. Esto asegura que el nuevo valor es apropiado para ese dato. 
+Los beneficios de la integridad de los datos no se obtiene automaticamente con el simple hecho de declarar las variables 
+de ejemplar private; el programador debe encargarse de verificar la validez. 
+Los métodos set de una clase con frecuencia devuelven valores que indican que se intento asignar datos no válidos a un objeto
+de esa clase. Esto permite a los clientes de la clase probar los valores devueltos por los métodos set para determinar 
+si los objetos que estan manipulando son validos y tomar medidas apropiadas si no lo son.
+
+e. El Garbage Collector elimina los objetos que ya no se utilizan proporcionando una gestión de memoria automática. 
+¿Cómo la JVM realiza el manejo de recursos? ¿Cuándo y cómo funciona el Garbage Collector?
+
+¿Cómo la JVM realiza el manejo de recursos?
+En principio, Java tiene varias similitudes con el modelo tradicional de ejecución de programas. En la JVM
+existen principalmente dos tipos de variables:
+· las primitivas (int, long, float, etc),
+· las de referencia a objetos
+Las primeras tienen una estructura fija y su contenido representa el dato en sí. Tanto la condición de
+estructuras de tamaño fijo como el de su tamaño relativamente pequeño hacen que sea práctica una
+administración de las mismas mediante el mismo mecanismo con memoria “Stack”.
+También las variables de referencia tienen una estructura fija, pero su contenido no es un dato en si, sino una
+dirección de memoria donde se encuentra la instancia del objeto que representa. Esto hace que sea posible
+también que las variables de referencia se administren mediante un “Stack”.
+Luego, éstas contienen la dirección de memoria de una estructura mucho más compleja, una instancia de una
+Clase (a la cual llamaremos objeto). El objeto no solamente representa un dato, sino que representa un
+conjunto de datos asociados a un concepto que incluye operaciones capaces de actuar sobre estos mismos
+datos. Debido a la cantidad de información que mantienen y la complejidad que requiere su administra ción,
+los objetos se guardan en el “Heap”. Los objetos pueden contener múltiples valores, y la referencia al objeto
+debe mantenerse durante toda la vida de ese objeto.
+
+¿Cuándo y cómo funciona el Garbage Collector?
+El proceso de recuperar la memoria del “Heap” que ya no esta siendo utilizada por algún objeto referenciado
+desde las variables del “Stack” se denomina Garbage Collector. El mismo se refiere a un algoritmo que,
+aunque implementado distinto, cumple la función de establecer que objetos ya no son utilizables (han perdido
+toda referencia a ellos) y por lo tanto, puede reutilizarse la memoria que ocupan. Este algoritmo, no solamente
+tendrá algunas diferencias entre distintas JVMs, sino que es posible encontrar distintos algoritmos para
+distintas situaciones en una misma JVM.
+
+
+
+
+
