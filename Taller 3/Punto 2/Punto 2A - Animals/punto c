@@ -1,4 +1,0 @@
-La generalización es el mecanismo de abstracción mediante el cual un conjunto de clases de objetos son agrupados en una clase
-de nivel superior (Superclase), donde las semejanzas de las clases constituyentes (Subclases) son enfatizadas, y las diferencias
-entre ellas son ignoradas. En consecuencia, a través de la generalización, la superclase almacena datos generales de las
-subclases, y las subclases almacenan sólo datos particulares.La especialización es lo contrario de la generalización. 
