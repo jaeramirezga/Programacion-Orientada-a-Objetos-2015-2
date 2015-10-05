@@ -1,0 +1,161 @@
+package javaapplication1;
+public class Rectangle{
+   double length=1;
+   double width=1; //Atributos
+   
+    Rectangle(){ //Constructor
+    }    
+   
+    Rectangle(double length, double width){ //Constructor
+    this.length=length;
+    this.width=width;
+    } 
+ 
+   
+   double getArea(){
+       return length*width;
+   }
+   
+     double getPerimeter(){
+       return 2*length+2*width;
+   }
+    
+   double getlength(){
+        return length;
+   }  
+    
+   double getwidth(){
+        return width;
+   } 
+  }
+  package javaapplication1;
+import static java.lang.Math.*;
+
+public class RectangleTriangle{
+   double base=1;
+   double height=1; //Atributos
+   
+    RectangleTriangle(){ //Constructor
+    }    
+   
+    RectangleTriangle(double base, double height){ //Constructor
+    this.base=base;
+    this.height=height;
+    } 
+     double getArea(){
+       return (base*height)/2;
+   }
+   
+     double getPerimeter(){
+       return base+height+sqrt(pow(base, 2)+pow(height,2));
+   }
+    
+   double getbase(){
+        return base;
+   }  
+    
+   double getheight(){
+        return height;
+   } 
+}
+
+package javaapplication1;
+import static java.lang.Math.*;
+
+public class IsoscelesTriangle{
+   double base=1;
+   double height=1; //Atributos
+   
+    IsoscelesTriangle(){ //Constructor
+    }    
+   
+    IsoscelesTriangle(double base, double height){ //Constructor
+    this.base=base;
+    this.height=height;
+    } 
+ 
+   
+   double getArea(){
+       return (base*height)/2;
+   }
+   
+     double getPerimeter(){
+       return base+sqrt(pow(base, 2)+4*(pow(height,2)));
+   }
+    
+   double getbase(){
+        return base;
+   }  
+    
+   double getheight(){
+        return height;
+   } 
+}
+
+package javaapplication1;
+import static java.lang.Math.*;
+public class Parallelogram{
+   double height=1;
+   double width=1; //Atributos
+   double angle=60;
+   
+    Parallelogram(){ //Constructor
+    }    
+   
+    Parallelogram(double height, double width, double angle){ //Constructor
+    this.height=height;
+    this.width=width;
+    this.angle=angle;
+    } 
+ 
+   
+   double getArea(){
+       return height*width;
+   }
+   
+     double getPerimeter(){
+      double P= 2*(width+(height/(cos(Math.toRadians(angle)))));//esta función hace una conversión a radianes
+      
+      return((double)Math.round(P* 100000d) / 100000d);//esta función aproxima a enteros
+   }
+    
+   double getheight(){
+        return height;
+   }  
+    
+   double getwidth(){
+        return width;
+   } 
+   
+   double getAngle(){
+       return angle;
+   }
+}
+
+package javaapplication1;
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+       System.out.println("Areas de poligonos");
+       System.out.println("Ejemplo Rectangulo");
+       
+      Rectangle billy = new Rectangle(2,3);
+      System.out.print("Base = "+billy.getwidth()+" Altura = "+ billy.getlength()+" ");
+      System.out.println("Area = "+billy.getArea()+" Perimetro = "+billy.getPerimeter());
+      System.out.println("");
+      
+      System.out.println("Rectangulo por defecto");
+      Rectangle bobby = new Rectangle();
+      System.out.print("Base = "+bobby.getwidth()+" Altura = "+ bobby.getlength()+" ");
+      System.out.println("Area = "+bobby.getArea()+" Perimetro = "+bobby.getPerimeter());
+      
+      System.out.println("Paralelogramo");
+      Parallelogram bill = new Parallelogram(2,3,60);
+      System.out.print("Base = "+bill.getwidth()+" Altura = "+ bill.getheight()+" Angulo = "+ bill.getAngle()+"° ");
+      System.out.println("Area = "+bill.getArea()+" Perimetro = "+bill.getPerimeter());
+      System.out.println("");
+      
+     
+    }
+ }
+  
