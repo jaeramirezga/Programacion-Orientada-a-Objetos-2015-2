@@ -1,7 +1,3 @@
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,6 +8,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 
 		System.out.println("Bienvenidos a Ajedrez Jubilado");
+		System.out.println("Autores Juan Contreras - Jaime Garzon");
 		SelectorInicial();
 
 	}
@@ -41,8 +38,7 @@ public class Main {
 				Jubilado.MoverFicha(0, 4, new Rey(0, 4, "Negro","Rey"));
 				Jubilado.MoverFicha(7, 4, new Rey(7, 4, "Blanco","Rey"));
 				Jubilado.imprimir();
-				
-				
+								
 				int posx, posy, posx2, posy2;
 				int finalGame = 0;
 				int playerno = 0;
@@ -147,6 +143,7 @@ public class Main {
 
 		case 2:
 			System.out.println("Estos son los HighScores");
+			System.out.println("Presentamos problemas con los Ficheros, lo cual nos borra los scores al ingresar un nuevo usuario...");
 			System.out.println("Digite 1. Para volver al menu inicial 2. Para salir del juego");
 			int SelecEnHighscores;
 			do{
