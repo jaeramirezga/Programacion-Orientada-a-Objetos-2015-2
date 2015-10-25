@@ -25,10 +25,10 @@ public class Main {
 
 			int SelecJuego;
 			do{
-				System.out.println("Seleccione la modalidad de ajedrez que desea jugar\n1.Jubilado 2.Mini 3 x 3 3. Volver al menu inicial");
+				System.out.println("Desea empezar a jugar? 1.Jubilado o 2. Volver al menu inicial");
 				SelecJuego = sc.nextInt();
 			}
-			while(SelecJuego < 1 || SelecJuego > 3 );
+			while(SelecJuego < 1 || SelecJuego > 2 );
 
 			switch(SelecJuego){
 			case 1:
@@ -61,7 +61,7 @@ public class Main {
 				    }
 				    Jubilado.imprimir();	
 					do {
-						System.out.println("Ingrese una posicion para una ficha blanca");
+						System.out.println("Ingrese una posicion para una ficha blanca...");
 						posx = sc.nextInt();
 						posy = sc.nextInt();
 					}
@@ -70,7 +70,7 @@ public class Main {
 					ArrayList<Pareja> aux = Jubilado.getFicha(posx, posy).desplegarOpciones(Jubilado); // <- desplegar
 					
 					do {
-						System.out.println("Ingrese la posicion final a la cual quiere mover la ficha blanca");
+						System.out.println("Ingrese la posicion final a la cual quiere mover la ficha blanca...");
 						posx2 = sc.nextInt();
 						posy2 = sc.nextInt();
 					}
@@ -93,7 +93,7 @@ public class Main {
 					
 					Jubilado.imprimir();
 					do {
-						System.out.println("Ingrese una posicion x,y para una ficha negra ");
+						System.out.println("Ingrese una posicion para una ficha negra... ");
 						posx = sc.nextInt();
 						posy = sc.nextInt();
 					}
@@ -102,7 +102,7 @@ public class Main {
 					ArrayList<Pareja> aux2 = Jubilado.getFicha(posx, posy).desplegarOpciones(Jubilado); // <- desplegar
 					
 					do {
-						System.out.println("Ingrese la posicion final a la cual quiere mover la ficha negra");
+						System.out.println("Ingrese la posicion final a la cual quiere mover la ficha negra...");
 						posx2 = sc.nextInt();
 						posy2 = sc.nextInt();
 					}
@@ -129,13 +129,8 @@ public class Main {
 			}
 			
 			break;
-			case 2:
-				System.out.println("Tablero 3x3");
-				Tablero Mini = new Tablero (3,3);
-				Mini.imprimir();
-				break;
 				
-			case 3: 
+			case 2: 
 				SelectorInicial();
 				break;
 
