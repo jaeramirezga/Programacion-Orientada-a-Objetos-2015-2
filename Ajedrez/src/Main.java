@@ -115,6 +115,7 @@ public class Main {
 					    if (selectEnCurso2 ==2 ){
 					    	finalGame = 3;
 					    	break;
+					    	
 					    }
 					
 					Jubilado.imprimir();
@@ -210,6 +211,7 @@ public class Main {
 				j.BorrarFicha(xi, yi);
 				System.out.println("Movimiento Satisfactorio");
 				jugador1 = !jugador1;
+				j.imprimir();
 				return;
 			}
 		}
