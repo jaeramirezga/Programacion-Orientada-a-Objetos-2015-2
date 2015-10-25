@@ -87,13 +87,13 @@ public class Main {
 				switch(player){
 				case 0:
 					System.out.println("Digite 1. Para continuar con el Juego 2. Para Finalizar la partida");
-					Jubilado.imprimir();
+					
 				    int selectEnCurso = sc.nextInt();
 				    if (selectEnCurso ==2 ){
 				    	finalGame = 3;
 				    	break;
 				    }
-				    	
+				    Jubilado.imprimir();	
 					do {
 						System.out.println("Ingrese una posicion para una ficha blanca");
 						posx = sc.nextInt();
@@ -130,7 +130,7 @@ public class Main {
 						posx = sc.nextInt();
 						posy = sc.nextInt();
 					}
-					while(!((jugador1 && Jubilado.getFicha(posx, posy).color.equals("Negro")) || (!jugador1 && Jubilado.getFicha(posx, posy).color.equals("Blanco"))));
+					while(!((jugador1 || Jubilado.getFicha(posx, posy).color.equals("Negro")) && (!jugador1 || Jubilado.getFicha(posx, posy).color.equals("Blanco"))));
 					
 					ArrayList<Pareja> aux2 = Jubilado.getFicha(posx, posy).desplegarOpciones(Jubilado); // <- desplegar
 					
