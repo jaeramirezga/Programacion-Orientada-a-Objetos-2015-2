@@ -69,13 +69,6 @@ public class Main {
 				Jubilado.MoverFicha(7, 4, new Rey(7, 4, "Blanco","Rey"));
 				Jubilado.imprimir();
 				
-				System.out.println("Este es el mapa del juego con las coordenadas x,y para que se puedan guiar");
-				for(int i = 0; i<8 ; i++ ){
-					for(int j = 0; j<8 ; j++ ){
-						System.out.print("["+i+","+j+"]");
-					}
-					System.out.println();
-				}
 				
 				int posx, posy, posx2, posy2;
 				int finalGame = 0;

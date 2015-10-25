@@ -20,6 +20,12 @@ public class Tablero {
 			    System.out.print("[");
 			    System.out.print(nombre[i][j]);	   
 				System.out.print("]");
+				System.out.print(" ");
+		   }
+		   System.out.print("   ");
+		   
+		   for( int j = 0 ; j < ancho ; j++ ){
+			    System.out.print("["+i+","+j+"]");
 		   }
 		   System.out.println();
 	   }

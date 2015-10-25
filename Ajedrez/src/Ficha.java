@@ -15,9 +15,7 @@ public class Ficha {
 
 	@Override
 	public String toString() {
-		String ans = "";
-		ans += color;
-		ans += tipo;
+		String ans = " ";
 		return ans;
 	}
 
@@ -31,6 +29,11 @@ class Peon extends Ficha {
 	
 	public Peon (int px , int py, String c,String t){
 		super (px , py, c, "Peon");  
+	}
+	public String toString() {
+		String ans = "p";
+		
+		return ans;
 	}
 	public String getColor() {
 		return color;
@@ -103,6 +106,10 @@ class Peon extends Ficha {
 class Rey extends Ficha {
 	public Rey (int rx , int ry, String c,String t) {
 		super (rx , ry, c, "Rey");
+	}
+	public String toString() {
+		String ans = "R";
+		return ans;
 	}
 	public ArrayList<Pareja> desplegarOpciones(Tablero Jubilado) {
 		ArrayList<Pareja> posiblesMovimientos = new ArrayList<>();
