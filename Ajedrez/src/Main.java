@@ -11,33 +11,6 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 
-		Scanner sc = new Scanner(new FileInputStream("texto.txt"));
-		
-		boolean esta = true;
-		ArrayList<String> all = new ArrayList<>();
-		while(sc.hasNextLine()) {
-			String a = sc.next();
-			String b = sc.next();
-			all.add(a);
-			all.add(b);
-			if(a.equals("Andres")) {
-				System.out.println(a + ", " + b);
-				esta = false;
-			}
-		}
-		
-		if(esta == false) {
-			FileWriter fichero = new FileWriter("texto.txt");
-			PrintWriter pw = new PrintWriter(fichero);
-			for(int i = 0; i < all.size(); i += 2) {
-				pw.println(all.get(i) + " " + all.get(i + 1));
-			}
-		
-			String palabra = "Jeje";
-			pw.println(palabra + " " + "otrapalabra");
-			fichero.close();
-		}
-
 		System.out.println("Bienvenidos a Ajedrez");
 		SelectorInicial();
 
