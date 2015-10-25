@@ -95,7 +95,7 @@ public class Main {
 				    }
 				    Jubilado.imprimir();	
 					do {
-						System.out.println("Ingrese una posicion para una ficha blanca");
+						System.out.println("Ingrese la posicion de una ficha blanca...");
 						posx = sc.nextInt();
 						posy = sc.nextInt();
 					}
@@ -104,7 +104,7 @@ public class Main {
 					ArrayList<Pareja> aux = Jubilado.getFicha(posx, posy).desplegarOpciones(Jubilado); // <- desplegar
 					
 					do {
-						System.out.println("Ingrese la posicion final a la cual quiere mover la ficha blanca");
+						System.out.println("Ingrese la posicion final a la cual quiere mover la ficha blanca...");
 						posx2 = sc.nextInt();
 						posy2 = sc.nextInt();
 					}
@@ -126,7 +126,7 @@ public class Main {
 					
 					Jubilado.imprimir();
 					do {
-						System.out.println("Ingrese una posicion x,y para una ficha negra ");
+						System.out.println("Ingrese la posicion de una ficha negra... ");
 						posx = sc.nextInt();
 						posy = sc.nextInt();
 					}
@@ -135,7 +135,7 @@ public class Main {
 					ArrayList<Pareja> aux2 = Jubilado.getFicha(posx, posy).desplegarOpciones(Jubilado); // <- desplegar
 					
 					do {
-						System.out.println("Ingrese la posicion final a la cual quiere mover la ficha negra");
+						System.out.println("Ingrese la posicion final a la cual quiere mover la ficha negra...");
 						posx2 = sc.nextInt();
 						posy2 = sc.nextInt();
 					}
