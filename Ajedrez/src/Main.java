@@ -87,6 +87,7 @@ public class Main {
 				switch(player){
 				case 0:
 					System.out.println("Digite 1. Para continuar con el Juego 2. Para Finalizar la partida");
+					Jubilado.imprimir();
 				    int selectEnCurso = sc.nextInt();
 				    if (selectEnCurso ==2 ){
 				    	finalGame = 3;
@@ -107,10 +108,9 @@ public class Main {
 						posx2 = sc.nextInt();
 						posy2 = sc.nextInt();
 					}
-					while(posx2<1 || posx2>8 || posy2<1 || posy2>8);
+					while(posx2<0 || posx2>8 || posy2<0 || posy2>8);
 					
 					hacerMovimiento(posx, posy, posx2, posy2, Jubilado, aux);
-					
 					playerno++;
 					
 					break;
