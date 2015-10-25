@@ -217,6 +217,7 @@ public class Main {
 				j.BorrarFicha(xi, yi);
 				System.out.println("Movimiento Satisfactorio");
 				jugador1 = !jugador1;
+				j.imprimir();
 				return;
 			}
 		}
