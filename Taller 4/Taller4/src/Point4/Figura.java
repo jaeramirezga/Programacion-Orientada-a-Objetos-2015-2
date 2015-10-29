@@ -1,4 +1,7 @@
-package Taller4puntosdel3;
+package Point4;
+
+import Point4.Figura;
+import Point4.Pair;
 
 public abstract class Figura {
 	

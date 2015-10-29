@@ -1,5 +1,4 @@
-package Taller4puntosdel3;
-
+package Point4;
 import java.util.Scanner;
 import java.util.ArrayList;
 

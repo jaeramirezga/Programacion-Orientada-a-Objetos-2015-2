@@ -1,4 +1,4 @@
-package Taller4puntosdel3;
+package Point4;
 
 public class Pair {
 	//Se crea una clase llamada pair
