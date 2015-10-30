@@ -5,16 +5,18 @@ import java.util.Scanner;
 public class Equipos {
 	
 	Scanner sc = new Scanner(System.in);
-	String nombre;
+	public String nombre;
 	int gol = 0;
 	Jugadores[] equipo = new Jugadores[5];
 	int goles;
+	int puntos = 0;
 	
 	public void crearEquipo(){
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Ingrese el nombre de su equipo...");
 		String equi = sc.next();
 		System.out.println("Listo!, este es el nombre de tu equipo: "+equi);
+		
 		
 		
 	}
@@ -42,6 +44,13 @@ public Jugadores[] agregarJugadores(){
 		mostrar_equipo();
 	return equipo;
 	}
+
+public int PartidoGanado(){
+	puntos += 3;
+}
+public int PartidoEmpatado(){
+	puntos += 1;
+}
 
 public Jugadores[] mostrar_equipo(){
 		System.out.println("Los jugadores de este equipo son: ");

@@ -7,10 +7,11 @@ public class Torneo {
 	public Torneo(){
 	}
 	
-	public Torneo[] agregarEquipos(){
+	public void agregarEquipos(){
 		System.out.println("Ingrese los datos de los equipos...");
 		for(int i=0; i <6 ; i++){
 			
+			System.out.println("Equipo No. "+ i);
 			Equipos[i].crearEquipo();
 			Jugadores[] agregarJugadores();
 			
@@ -20,29 +21,28 @@ public class Torneo {
 	public void Partido(Equipos a,Equipos b){
 		int[]  goles = new int[2];
 		do{
-			System.out.println("Digite la cantidad de goles anotados por el equipo ");
+			System.out.println("Digite la cantidad de goles anotados por el equipo "+ a.nombre );
 			goles[0] = sc.nextInt();
 		}while(goles[0] < 0);
 		
 		do{
-			System.out.println("Digite la cantidad de goles anotados por el equipo ");
+			System.out.println("Digite la cantidad de goles anotados por el equipo "+ b.nombre);
 			goles[1] = sc.nextInt();
 		}while(goles[1] < 0);
-		
-		System.out.println("El equipo ganador es ");
-		
+				
 		if(goles[0] > goles[1]){
 			System.out.println("El equipo ganador es ");
-			Equipo a.puntos = Equipo a.puntos + 3; 
+			a.PartidoGanado();
+			
 		}
 		if(goles[0] == goles[1]){
 			System.out.println("El resultado del partido es un empate ");
-			Equipo a.puntos = Equipo a.puntos + 1;
-			Equipo b.puntos = Equipo b.puntos + 1;
+			a.PartidoEmpatado();
+			b.PartidoEmpatado();
 		}
 		if(goles[0] < goles[1]){
 			System.out.println("El equipo ganador es ");
-			Equipo b.puntos = Equipo b.puntos + 3;
+			b.PartidoGanado();
 		}
 	}
 	
