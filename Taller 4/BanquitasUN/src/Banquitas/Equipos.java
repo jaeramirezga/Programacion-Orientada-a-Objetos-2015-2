@@ -1,4 +1,4 @@
-package Banquitas;
+ 	package Banquitas;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ public class Equipos {
 	Scanner sc = new Scanner(System.in);
 	String nombre;
 	int gol = 0;
-	Jugadores[] equipo = new Jugadores[4];
+	Jugadores[] equipo = new Jugadores[5];
 	int goles;
 	
 	public void crearEquipo(){
@@ -19,7 +19,7 @@ public class Equipos {
 		
 	}
 	
-	public Jugadores[] agregarJugadores(){
+public Jugadores[] agregarJugadores(){
 		System.out.println("Ingrese los datos de sus jugadores...");
 		for(int id=0; id<=5;id++){
 			
@@ -42,7 +42,8 @@ public class Equipos {
 		mostrar_equipo();
 	return equipo;
 	}
-	public Jugadores[] mostrar_equipo(){
+
+public Jugadores[] mostrar_equipo(){
 		System.out.println("Los jugadores de este equipo son: ");
 		for(int it=0; it<=6;it++){
 			

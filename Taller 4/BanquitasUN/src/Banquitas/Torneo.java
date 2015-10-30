@@ -1,13 +1,23 @@
 package Banquitas;
 
 public class Torneo {
-	
-Scanner sc = new Scanner (System.in);
+	Scanner sc = new Scanner (System.in);
+	new Equipos [] Equipos_Torneo = new Equipos [6];
 	
 	public Torneo(){
 	}
 	
-	public void Partido(Equipo a,Equipo b){
+	public Torneo[] agregarEquipos(){
+		System.out.println("Ingrese los datos de los equipos...");
+		for(int i=0; i <6 ; i++){
+			
+			Equipos[i].crearEquipo();
+			Jugadores[] agregarJugadores();
+			
+										
+		}
+		
+	public void Partido(Equipos a,Equipos b){
 		int[]  goles = new int[2];
 		do{
 			System.out.println("Digite la cantidad de goles anotados por el equipo ");
