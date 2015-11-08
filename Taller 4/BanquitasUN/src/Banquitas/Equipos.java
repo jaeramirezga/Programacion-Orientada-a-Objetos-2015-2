@@ -1,13 +1,22 @@
-package Banquitas;
+ 	package Banquitas;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Equipos {
 	
+<<<<<<< HEAD
 	String nombre;
 	int gol = 0;
 	ArrayList<Jugadores> equipo = new ArrayList<>();
+=======
+	Scanner sc = new Scanner(System.in);
+	public String nombre;
+	int gol = 0;
+	Jugadores[] equipo = new Jugadores[5];
+	int goles;
+	int puntos = 0;
+>>>>>>> origin/master
 	
 	public void crearEquipo(){
 		Scanner sc = new Scanner(System.in);
@@ -21,6 +30,7 @@ public class Equipos {
 		System.out.println("Editar equipo:");
 		System.out.println("Seleccione el equipo a editar:");
 		
+<<<<<<< HEAD
 		for(int id=0; id<=4;id++){
 			int c = id+1;
 			Scanner sc = new Scanner(System.in);
@@ -43,6 +53,12 @@ public class Equipos {
 	}
 	
 	public void agregarJugadores(){
+=======
+		
+	}
+	
+public Jugadores[] agregarJugadores(){
+>>>>>>> origin/master
 		System.out.println("Ingrese los datos de sus jugadores...");
 		for(int id=0; id<=5;id++){
 			int c = id+1;
@@ -66,10 +82,22 @@ public class Equipos {
 		System.out.println("Su nuevo equipo ahora es: ");
 		mostrarEquipo();
 	}
+<<<<<<< HEAD
 	
 	
 	
 	public void mostrarEquipo(){
+=======
+
+public int PartidoGanado(){
+	puntos += 3;
+}
+public int PartidoEmpatado(){
+	puntos += 1;
+}
+
+public Jugadores[] mostrar_equipo(){
+>>>>>>> origin/master
 		System.out.println("Los jugadores de este equipo son: ");
 		Jugadores tmp = new Jugadores();
 		for(int id=0; id<=4;id++){			
