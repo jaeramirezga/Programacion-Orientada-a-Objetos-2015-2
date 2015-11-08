@@ -3,24 +3,17 @@ package Banquitas;
 public class Jugadores {
 
 		String nombre;
-		String equipo;
 		String posicion;
 		int edad;
 		int dorsal;
 		int goles;		
-		String habilidad = ""; 		
+		String habilidad; 		
 
 
 public String getNombre(){
 	return nombre;
 }
 public void setNombre(String nombre){
-	this.nombre= nombre;
-}
-public String getEquipo(){
-	return equipo;
-}
-public void setEquipo(String nombre){
 	this.nombre= nombre;
 }
 public String getPosicion(){
@@ -57,24 +50,26 @@ public void setHabilidad(String habilidad){
 public void mostrarJugador(){
 	
 	System.out.println("Su nombre es: "+ nombre);
-	System.out.println("Su equipo es: "+ equipo);
 	System.out.println("Su posicion es: "+ posicion);
-	System.out.println("Su edad es: "+ edad);
-	System.out.println("Su dorsal es: "+ dorsal);
-	System.out.println("Su goles es: "+ goles);
+	System.out.println("Su edad es: "+ edad+" años");
+	System.out.println("Su dorsal es el numero: "+ dorsal);
 	System.out.println("Su habilidad es: "+ habilidad);
+	System.out.println("Sus goles son: "+ goles);
+	
 }
 
-public Jugadores(){
+public Jugadores(String nombre, String posicion, int edad, int dorsal, int goles, String habilidad){
 	
 	this.nombre= nombre;
-	this.equipo= equipo;
 	this.posicion= posicion;
 	this.edad=edad;
 	this.dorsal=dorsal;
 	this.goles= goles;	
 	this.habilidad= habilidad;
 
+}
+public Jugadores(){
+	
 }
 }
 
