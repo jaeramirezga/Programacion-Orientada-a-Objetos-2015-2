@@ -1,13 +1,17 @@
 package Registro;
 
+import java.io.FileOutputStream;
 import java.util.Date;
 
 public class Persona {
-	String Nombre, Apellido;
-	int ID, Edad, Fallas = 0;
-	Date HoraMaxEntrada, HoraMinSalida;
-	boolean Estado;
-	String Password;
+	private String Nombre, Apellido;
+	private int ID, Edad, Fallas = 0;
+	private Date HoraMaxEntrada, HoraMinSalida;
+	private boolean Estado;
+	private String Password;
+	private String fichero;
+	
+	
 	
 	public Persona(String Nombre, String Apellido, int ID,int Edad, String Password){
 		this.Nombre = Nombre;
