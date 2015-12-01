@@ -1,6 +1,5 @@
 package Controlador;
 
-import java.util.Date;
 
 public class Funcionario {	
 
@@ -10,14 +9,12 @@ public class Funcionario {
 	int edad;
 	int tipo;
 	int fallas = 0;
-	Date horain;
+	double horain = 7.35;
 	boolean estado = false;
-
 	
-	public Funcionario(String nombre, String apellido, double iD, int edad, int tipo, int fallas, Date horain,
+	public Funcionario(String nombre, String apellido, double iD, int edad, int tipo, int fallas, double horain,
 			boolean estado) {
 		
-		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
 		ID = iD;
@@ -26,26 +23,33 @@ public class Funcionario {
 		this.fallas = fallas;
 		this.horain = horain;
 		this.estado = estado;
-
-		
 	}
+
+	
+	
 }
 
 class Empleado extends Funcionario {
 
-	public Empleado(String nombre, String apellido, double iD, int edad, int tipo, int fallas, Date horain,
+	public Empleado(String nombre, String apellido, double iD, int edad, int tipo, int fallas, double horain,
 			boolean estado) {
 		super(nombre, apellido, iD, edad, tipo, fallas, horain, estado);
+		
 	}
+
+	
 
 }
 
 class Trabajador extends Funcionario {
 
-	public Trabajador(String nombre, String apellido, double iD, int edad, int tipo, int fallas, Date horain,
+	public Trabajador(String nombre, String apellido, double iD, int edad, int tipo, int fallas, double horain,
 			boolean estado) {
 		super(nombre, apellido, iD, edad, tipo, fallas, horain, estado);
+	
 	}
+
+	
 
 }
 

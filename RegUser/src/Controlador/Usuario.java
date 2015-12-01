@@ -20,13 +20,17 @@ public class Usuario{
 	public Secretaria(int id, String password, String tipo) {
 			super(id, password,tipo);
 		}
+	}
 
 	class Contador extends Usuario{
-
+		
+		
+		
+		
 		public Contador(int id, String password, String tipo) {
 			super(id, password, tipo);
 		}
 
 
 	}
-}
+
