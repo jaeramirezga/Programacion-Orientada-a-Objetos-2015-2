@@ -21,6 +21,32 @@ public class Funcionario {
 		this.apellido = apellido;
 		ID = iD;
 		this.edad = edad;
+		estado = false;
+	}
+	
+	public void sethoradeentrada(double horaen){
+		this.horadeentrada = horaen;
+	}
+	
+	public double gethoradeentrada(){
+		return horadeentrada;
+	}
+	
+	public void sethoradesalida(double horadesal){
+		this.horadesalida = horadesal;
+	}
+	
+	public double gethoradesalida(){
+		return horadesalida;
+	}
+	
+	
+	public void setestado(boolean estado){
+		this.estado = estado;
+	}
+	
+	public boolean getestado(){
+		return estado;
 	}
 	
 	public void horadeentradaysalida(){
@@ -40,6 +66,8 @@ class Empleado extends Funcionario {
 		tipo = 1;
 	}
 	
+	
+	
 	public void horadeentradaysalida(double he, double hs){
 		Horas horas = new Horas(he,hs);
 		if (he>horamaxin){
@@ -54,8 +82,6 @@ class Empleado extends Funcionario {
 		
 	}
 	
-	
-
 }
 
 class Trabajador extends Funcionario {

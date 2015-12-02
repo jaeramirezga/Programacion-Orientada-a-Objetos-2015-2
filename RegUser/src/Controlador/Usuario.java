@@ -1,18 +1,15 @@
 package Controlador;
+import Controlador.Funcionario;
 
-public class Usuario{
-	
+class Secretaria {
 	String id;
 	String password;
-	String tipo;
 	
-	public Usuario(String id, String password) {
-		super();
+	public Secretaria(String id, String password) {
 		this.id = id;
 		this.password = password;
-	}
-	
-	
+		
+		}
 	public void setid(String Id){
 		id = Id;
 	}
@@ -28,23 +25,14 @@ public class Usuario{
 	public String getpassword(){
 		return password;
 	}
-
-}
-
-class Secretaria extends Usuario{
-			
-	public Secretaria(String id, String password) {
-			super(id, password);
-			tipo = "Secretaria";
-		}
-	
-	
-	public void RegistroDeEntrada(){
 		
+	public void RegistroDeEntrada(Funcionario x, double horadeentrada){
+		x.sethoradeentrada(horadeentrada);
 	}
-	public void RegistroDeSalida(){
-		
+	public void RegistroDeSalida(Funcionario x, double horadesalida){
+		x.sethoradesalida(horadesalida);
 	}
+	
 	public void NuevoUsurio(){
 		
 	}
@@ -57,25 +45,17 @@ class Secretaria extends Usuario{
 	public void HistorialSalida(){
 		
 	}
-	
-}
-
-class Contador extends Usuario{
+	public void CalcularTrabajo(){
 		
-		public Contador(String id, String password) {
-			super(id, password);
-			tipo = "Contador";
-		}
-		public void CalcularTrabajo(){
-			
-		}
+	}
 
-		public void Pagar(){
-			
-		}
+	public void Pagar(){
+		
+	}
 
-		public void HistorialPagos(){
-			
-		}
+	public void HistorialPagos(){
+		
+	}
+	
 }
 
