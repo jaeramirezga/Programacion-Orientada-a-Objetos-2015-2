@@ -1,6 +1,6 @@
 package Controlador;
 
-import Modelo.Horas;
+import Controlador.Horas;
 
 public class Funcionario {	
 

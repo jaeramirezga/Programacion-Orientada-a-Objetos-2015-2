@@ -1,6 +1,7 @@
 package Controlador;
+
 import Controlador.Funcionario;
-import Modelo.Horas;
+import Controlador.Horas;
 
 class Secretaria {
 	String id;

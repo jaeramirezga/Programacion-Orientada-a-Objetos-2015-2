@@ -1,11 +1,11 @@
-package Modelo;
+package Controlador;
 
 import Controlador.Funcionario;
 
 public class Evaluador{
 	
-	
-	public boolean EvaluarInorOut(Funcionario x){
+	//PARCE COMENTE ESTO PORQUE DABA ERROR, SOLO ERA PARA QUE CUANDO EJECUTARA NO ME ENVIARA A CADA RATO UN MENSAJE DE ERROR
+	/*public boolean EvaluarInorOut(Funcionario x){
 		
 		if (x.getestado() == false){
 			return false;
@@ -17,9 +17,12 @@ public class Evaluador{
 			return true;
 			x.setestado(false);
 		}
-	} 	
+	} */	
 	
 	public double EvaluarTardanza(){
+		
+		
+		return 0;
 		
 	}
 	
