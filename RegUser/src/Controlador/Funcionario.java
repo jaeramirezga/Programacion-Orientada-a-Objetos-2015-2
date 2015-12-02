@@ -1,4 +1,5 @@
 package Controlador;
+
 import Modelo.Horas;
 
 public class Funcionario {	
@@ -11,9 +12,12 @@ public class Funcionario {
 	int fallas = 0;
 	double horamaxin;
 	double horaminout; 
+	double numhoras;
 	boolean estado;
 	double horadeentrada;
 	double horadesalida;
+	double salarioporhoras;
+	double horastrabajadas;
 	
 	public Funcionario(String nombre, String apellido, double iD, int edad) {
 		
@@ -49,8 +53,19 @@ public class Funcionario {
 		return estado;
 	}
 	
-	public void horadeentradaysalida(){
-		
+	public double horastrabajadas(){
+		Horas horas = new Horas(horadeentrada,horadesalida);
+		if (horadeentrada > horamaxin){
+			fallas++;
+		}
+		if (horadeentrada< horaminout){
+			fallas++;
+		}
+		if(horas.tiempoaldia(horadeentrada,horadesalida)<numhoras){
+			fallas++;
+		}
+		horastrabajadas = horadesalida - horadeentrada;
+		return horastrabajadas;
 	}
 	
 }
@@ -64,22 +79,8 @@ class Empleado extends Funcionario {
 		fallas = 0;
 		estado = false;
 		tipo = 1;
-	}
-	
-	
-	
-	public void horadeentradaysalida(double he, double hs){
-		Horas horas = new Horas(he,hs);
-		if (he>horamaxin){
-			fallas++;
-		}
-		if (hs<horaminout){
-			fallas++;
-		}
-		if(horas.tiempoaldia(he,hs)<7){
-			fallas++;
-		}
-		
+		numhoras = 7;
+		salarioporhoras = 7000 ;
 	}
 	
 }
@@ -93,21 +94,11 @@ class Trabajador extends Funcionario {
 		fallas = 0;
 		estado = false;
 		tipo = 2;
+		numhoras = 9;
+		salarioporhoras = 3500; 
 		}
 
-	public void horadeentradaysalida(double he, double hs){
-		Horas horas = new Horas(he,hs);
-		if (he>horamaxin){
-			fallas++;
-		}
-		if (hs<horaminout){
-			fallas++;
-		}
-		if(horas.tiempoaldia(he,hs)<9){
-			fallas++;
-		}
-		
-	}
+
 
 }
 

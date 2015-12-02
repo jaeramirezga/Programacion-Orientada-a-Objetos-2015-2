@@ -1,6 +1,5 @@
 package Modelo;
-import Controlador.Funcionario;
-import Controlador.Usuario; 
+ 
 
 public class Horas {
 	double horadeingreso;

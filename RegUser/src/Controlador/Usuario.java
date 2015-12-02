@@ -1,5 +1,6 @@
 package Controlador;
 import Controlador.Funcionario;
+import Modelo.Horas;
 
 class Secretaria {
 	String id;
@@ -33,6 +34,7 @@ class Secretaria {
 		x.sethoradesalida(horadesalida);
 	}
 	
+	
 	public void NuevoUsurio(){
 		
 	}
@@ -49,7 +51,9 @@ class Secretaria {
 		
 	}
 
-	public void Pagar(){
+	public double Pagar(Funcionario x ){
+		
+		return (x.salarioporhoras *  x.horastrabajadas);
 		
 	}
 
